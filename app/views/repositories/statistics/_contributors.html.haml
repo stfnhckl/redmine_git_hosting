@@ -18,6 +18,7 @@
       %div{ id: "contributor-#{idx}", class: 'thumbnail' }
         %h4
           = commits_data[:author_name]
+          %br
           %small= commits_data[:author_mail]
 
         %h5= commits_data[:total_commits]
