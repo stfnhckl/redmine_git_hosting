@@ -24,12 +24,12 @@ module ReportQuery
 
 
     def redmine_committers
-      @redmine_committers ||= all_changesets.where('user_id IS NOT NULL').select(:user_id).uniq.count
+      @redmine_committers ||= all_changesets.where('user_id IS NOT NULL').distinct.count(:user_id)
     end
 
 
     def external_committers
-      @external_committers ||= all_changesets.where(user_id: nil).select(:committer).uniq.count
+      @external_committers ||= all_changesets.where(user_id: nil).distinct.count(:committer)
     end
 
 
