@@ -4,9 +4,6 @@ gem 'gitolite-rugged', git: 'https://github.com/jbox-web/gitolite-rugged.git', t
 # Ruby/Rack Git Smart-HTTP Server Handler
 gem 'gitlab-grack', '~> 2.0.0', git: 'https://github.com/jbox-web/grack.git', require: 'grack', branch: 'fix_gemfile'
 
-# HAML views
-gem 'haml-rails'
-
 # Memcached client for GitCache
 gem 'dalli'
 
@@ -15,9 +12,10 @@ gem 'redis'
 gem 'hiredis'
 
 # Markdown rendering
+gem 'escape_utils'
 gem 'html-pipeline'
-gem 'task_list'
 gem 'rinku'
+gem 'task_list'
 
 # Syntaxic coloration
 gem 'github-markup'
@@ -31,19 +29,22 @@ gem 'rack-parser', require: 'rack/parser'
 
 # temp autoloading fix
 gem 'sidekiq'
-gem 'faker', '1.7.3'
 gem 'sshkey'
 
 group :development, :test do
   gem 'rspec'
-  gem 'rspec-rails'
+  gem 'rspec-rails', '~> 3.5', '>= 3.5.2'
+  gem 'rails-controller-testing'
 
   gem 'shoulda', '~> 3.5.0'
-  gem 'shoulda-matchers', '~> 2.7.0'
   gem 'shoulda-context'
+  gem 'shoulda-matchers', '~> 2.7.0'
 
-  gem 'factory_bot_rails'
   gem 'database_cleaner'
+  gem 'factory_bot_rails', '< 5.0'
+
+  gem 'rubocop', require: false
+  gem 'rubocop-rspec'
 
   # Publish to CodeClimate
   gem 'codeclimate-test-reporter', require: false
@@ -52,6 +53,6 @@ end
 group :development do
   gem 'brakeman'
   gem 'bullet'
-  gem 'spring-commands-rspec'
   gem 'spring'
+  gem 'spring-commands-rspec'
 end
