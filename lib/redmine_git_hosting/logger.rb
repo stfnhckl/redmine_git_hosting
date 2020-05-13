@@ -2,13 +2,7 @@ require 'logger'
 
 module RedmineGitHosting
   class Logger < ::Logger
-
-    LOG_LEVELS = [
-      'debug',
-      'info',
-      'warn',
-      'error'
-    ]
+    LOG_LEVELS = %w[debug info warn error].freeze
 
     def self.init_logs!(appname, logfile, loglevel)
       logger           = new(logfile)
@@ -19,6 +13,5 @@ module RedmineGitHosting
       end
       logger
     end
-
   end
 end

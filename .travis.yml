@@ -1,9 +1,11 @@
 language: ruby
-sudo: required
+os: linux
+dist: xenial
+
 cache: bundler
 rvm:
-  - 2.6.3
-  - 2.4.6
+  - 2.6.6
+  - 2.4.10
   - 2.3.8
 gemfile:
   - Gemfile
@@ -25,9 +27,11 @@ env:
     - MYSQL_PASSWORD=
     - POSTGRES_DATABASE=redmine
     - POSTGRES_USER=postgres
-  matrix:
+  jobs:
     - REDMINE_VERSION=4.0-stable DATABASE_ADAPTER=mysql USE_SVN=true
     - REDMINE_VERSION=4.0-stable DATABASE_ADAPTER=postgresql USE_SVN=true
+    - REDMINE_VERSION=4.1-stable DATABASE_ADAPTER=mysql USE_SVN=true
+    - REDMINE_VERSION=4.1-stable DATABASE_ADAPTER=postgresql USE_SVN=true
 before_install:
   - cd ../..
   - sudo apt-get update -qq

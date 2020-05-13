@@ -54,7 +54,6 @@ es:
   all_references: Todas&nbsp;las&nbsp;referencias
   all_tags: Todas&nbsp;las&nbsp;etiquetas
   button_clone: Clonar
-  button_ok: Aceptar
   display_access_emphasis: "En los patrones de arriba, los componentes <em>resaltados</em> representan elementos dependientes del contexto."
   display_access_flat: "Los proyectos padre no se incluyen en las URLs, ya que el repositorio está en modo <em>plano</em>."
   display_access_hierarchical: "Los proyectos padre se incluyen en las URLs, ya que el repositorio está en modo <em>jerárquico</em>."
@@ -96,11 +95,11 @@ es:
   label_default_gitolite_hooks_url: URL por defecto
   label_default_repository: Repository por defecto
   label_delete_from_recyle_bin: Borrar de la papelera de reciclaje
-  label_delete_git_repositories: ¿Borrar el repositorio de Git cuando se borre el proyecto?<br/> (se moverá a la papelera de reciclaje)
+  label_delete_git_repositories: ¿Borrar el repositorio de Git cuando se borre el proyecto?
+  info_delete_git_repositories: (se moverá a la papelera de reciclaje)
   label_delete_in_progress: Borrando...
   label_delete_warning: ¡Atención! ¡El borrado es permanente!
   label_deploy_key: Clave de despliegue
-  label_deployment_credential_active: ¿Activo?
   label_deployment_credential_add: Añadir credencial de despliegue
   label_deployment_credential_create_key_first: No se ha detectado ninguna clave de despliegue. Debe crear una antes.
   label_deployment_credential_create: Crear nueva credencial de despliegue
@@ -124,7 +123,6 @@ es:
   label_enable_protected_branches: Activar las ramas protegidas
   label_enable_public_repo: Hacer público el repositorio
   label_enable_smart_http: Modo HTTP inteligente
-  label_enabled: Activado
   label_error: Error
   label_etcetera: etc.
   label_example_repository: Repository de ejemplo
@@ -253,7 +251,6 @@ es:
   label_mirror_forced_update: Forzar la actualización de la réplica
   label_mirror_full_mirror: Réplica completa
   label_mirror_help: Las réplicas deben autorizar el acceso de escritura a la siguiente clave pública
-  label_mirror_inactive: Inactivo
   label_mirror_include_all_branches: Enviar todas las ramas
   label_mirror_include_all_tags: Enviar todas las etiquetas
   label_mirror_push_fail: Erróneo
@@ -409,3 +406,4 @@ es:
   select_other_keys: Otras claves
   text_gitolite_key_destroy_confirmation: "¿Seguro que quiere destruir esta clave: %{title}?"
   text_scm_command_not_available_git_hosting: el comando SCM no está disponible. Por favor, compruebe la configuración en el panel de administración del conector Redmine Git Hosting.
+  label_install_hook_results: Install hook results
